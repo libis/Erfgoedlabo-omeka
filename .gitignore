@@ -17,10 +17,11 @@
 /admin/.htaccess
 /Capfile
 /application/logs
-/themes/erfgoedlabo1_no/
+/themes/unused/
 /themes/erfgoedlabo3/
 /themes/erfgoedlabo4/
 /themes/erfgoedlabo4/
+/themes/erfgoedlabo5/
 /themes/erfgoedlabo/images
 /themes/erfgoedlabo/sass
 /themes/erfgoedlabo/.sass-cache

@@ -8413,11 +8413,9 @@ header {
   padding: 0.5rem 2rem 0.5rem 0;
 }
 
-.exhibit-show-section .dienst-logo,
-.simple-page-section .dienst-logo {
-  padding: 1rem 0 2rem 0;
-  max-width: 100%;
-  max-height: 130px;
+.exhibit-show-section .record,
+.simple-page-section .record {
+  margin-bottom: 2rem;
 }
 
 .exhibit-show-section .field,
@@ -8544,18 +8542,6 @@ header {
   max-width: 100%;
 }
 
-.exhibit-show-section .content,
-.simple-page-section .content {
-  padding: 0 2rem;
-}
-
-@media (max-width: 767px) {
-  .exhibit-show-section .content,
-  .simple-page-section .content {
-    padding: 0;
-  }
-}
-
 .exhibit-show-section .content .item-file,
 .simple-page-section .content .item-file {
   margin-bottom: 2rem;
@@ -8571,25 +8557,6 @@ header {
   margin-bottom: 2rem;
 }
 
-.exhibit-show-section .co,
-.simple-page-section .co {
-  margin-bottom: 2rem;
-}
-
-.exhibit-show-section .co ul li,
-.simple-page-section .co ul li {
-  border-top: none;
-}
-
-@media (max-width: 767px) {
-  .exhibit-show-section .co,
-  .simple-page-section .co {
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 .exhibit-show-section .side,
 .simple-page-section .side {
   margin-top: 0rem;
@@ -8599,44 +8566,6 @@ header {
 .simple-page-section .side h2 {
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.exhibit-show-section .side .side-logo,
-.simple-page-section .side .side-logo {
-  margin-bottom: 1rem;
-  width: 250px;
-}
-
-.exhibit-show-section .side .lias-zoek input,
-.simple-page-section .side .lias-zoek input {
-  padding: 5px;
-  width: 75%;
-  border: 1px solid rgba(246, 136, 50, 0.5);
-  margin-bottom: 0.5rem;
-}
-
-.exhibit-show-section .side .lias-zoek .button,
-.simple-page-section .side .lias-zoek .button {
-  width: 20%;
-  background: #F68832;
-  color: white;
-}
-
-.exhibit-show-section .side .lias-zoek .handleiding,
-.simple-page-section .side .lias-zoek .handleiding {
-  float: right;
-  font-size: 0.9rem;
-}
-
-.exhibit-show-section .side .lias-zoek .lias-meer,
-.simple-page-section .side .lias-zoek .lias-meer {
-  clear: both;
-  color: #F68832;
-}
-
-.exhibit-show-section .side .lias-zoek .lias-meer a,
-.simple-page-section .side .lias-zoek .lias-meer a {
-  color: #F68832;
 }
 
 .exhibit-show-section .side-nav,

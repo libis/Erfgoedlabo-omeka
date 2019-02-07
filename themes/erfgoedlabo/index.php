@@ -53,61 +53,24 @@
   <div class='container'>
     <h1>Projecten </h1>
     <div class="row">
-        <div class="co col-md-6 col-lg-4">
-            <div class="col-content">
-              <img src="<?php echo img('project1.jpg');?>" alt="idemdatabase_usecase.JPG" title="idemdatabase_usecase.JPG">              </div>
-            <a class="block-link" href="alamirefoundation_idem">
-              <div class="col-overlay">
-                  <h2>Gezamenlijke activiteit op Erfgoeddag</h2>
-                  <p>Op Erfgoeddag 2019 gaan de partners samen aan de slag met het thema ambachten.</p>
-              </div>
-            </a>
-        </div>
-        <div class="co col-md-6 col-lg-4">
-            <div class="col-content">
-              <img src="<?php echo img('project2.jpg');?>" alt="Limo in mac.png" title="Limo in mac.png">              </div>
-            <a class="block-link" href="limo-zoekinterface">
-              <div class="col-overlay">
-                <h2>Erfgoed en de vier elementen</h2>
-                <p>Onder deze titel schenkt het Erfgoedlabo vanaf 2019 aandacht aan de impact van de vier elementen – water, lucht, aarde en vuur – op het erfgoed in Leuven.</p>
-
-              </div>
-            </a>
-        </div>
-        <div class="co col-md-6 col-lg-4">
-            <div class="col-content">
-              <img src="<?php echo img('project1.jpg');?>" alt="idemdatabase_usecase.JPG" title="idemdatabase_usecase.JPG">              </div>
-            <a class="block-link" href="alamirefoundation_idem">
-              <div class="col-overlay">
-                  <h2>Gezamenlijke activiteit op Erfgoeddag</h2>
-                  <p>Op Erfgoeddag 2019 gaan de partners samen aan de slag met het thema ambachten.</p>
-              </div>
-            </a>
-        </div>
-
+      <?php $projects = get_records("Item",array('sort_field' => 'added', 'sort_dir' => 'd',"type" => "project"),3);?>
+        <?php foreach($projects as $project):?>
+          <div class="co col-md-6 col-lg-4">
+              <a class="block-link" href="<?php echo record_url($project);?>">
+                <div class="col-content">
+                  <?php echo item_image('square_thumbnail', array(), 0, $project);?>
+                </div>
+                <div class="col-overlay">
+                    <h2><?php echo metadata($project, array("Dublin Core", "Title"));?></h2>
+                    <p><?php echo metadata($project, array("Dublin Core", "Description"));?></p>
+                </div>
+              </a>
+          </div>
+        <?php endforeach;?>
       </div>
       <div class="about-button">
-        <a href="<?php echo url("over-libis");?>">Meer informatie over de projecten</a>
+        <a href="<?php echo url("projecten");?>">Meer informatie over de projecten</a>
       </div>
-      <div class="row">
-        <?php $usecases = get_usecases();?>
-        <?php if($usecases):?>
-          <?php foreach($usecases as $usecase):?>
-            <div class="co col-md-6 col-lg-4">
-              <h2><?php echo metadata($usecase, array("Dublin Core", "Title"));?></h2>
-              <div class="col-content">
-                <?php echo item_image('square_thumbnail', array(), 0, $usecase);?>
-              </div>
-              <a class="block-link" href="<?php echo metadata($usecase, array("Item Type Metadata", "simple-page"));?>">
-              <div class="col-overlay">
-                  <p><?php echo metadata($usecase, array("Dublin Core", "Description"));?></p>
-              </div>
-              </a>
-            </div>
-          <?php endforeach;?>
-        <?php endif;?>
-      </div>
-
   </div>
 </section>
 

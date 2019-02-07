@@ -16,7 +16,7 @@
             <?php endif; ?>
             <p>Het Erfgoedlabo Leuven is het netwerk van de professionele culturele erfgoedactoren. In dialoog met de brede erfgoedsector bundelen ze hun krachten door expertisedeling, overleg en samenwerking.</p>
             <div class="about-button">
-              <a href="<?php echo url("over-libis");?>">Lees meer</a>
+              <a href="<?php echo url("about");?>">Lees meer</a>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@
 /.project
 /BingSiteAuth.xml
 /.settings
+/files
 /_notes
 /.project
 /error.txt
@@ -18,7 +19,7 @@
 /Capfile
 /application/logs
 /themes/unused/
-#/themes/erfgoedlabo/images
+/themes/erfgoedlabo/images
 /themes/erfgoedlabo/sass
 /themes/erfgoedlabo/.sass-cache
 /.vscode

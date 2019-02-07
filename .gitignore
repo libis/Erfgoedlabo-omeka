@@ -18,11 +18,7 @@
 /Capfile
 /application/logs
 /themes/unused/
-/themes/erfgoedlabo3/
-/themes/erfgoedlabo4/
-/themes/erfgoedlabo4/
-/themes/erfgoedlabo5/
-/themes/erfgoedlabo/images
+#/themes/erfgoedlabo/images
 /themes/erfgoedlabo/sass
 /themes/erfgoedlabo/.sass-cache
 /.vscode
@@ -31,7 +27,6 @@
 /themes/erfgoedlabo/package.json
 /themes/erfgoedlabo/config.rb
 /themes/erfgoedlabo/Gruntfile.js
-/plugins/SolrSearch/solr-core
 
 #################
 ## Eclipse

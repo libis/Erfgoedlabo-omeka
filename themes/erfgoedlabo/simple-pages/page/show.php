@@ -14,24 +14,12 @@ echo head(array(
 ));
 ?>
 <div class="content-wrapper simple-page-section ">
-  <div class="container simple-page-container">
+  <div class="container simple-page-container page">
     <!-- Content -->
-    <div class="row">
-        <div class="col-md-12 col-sm-12 page">
-            <div class='row breadcrumbs'>
-              <div class="col-sm-12 col-xs-12">
-                <p id="simple-pages-breadcrumbs"><span><?php echo simple_pages_display_breadcrumbs(); ?></span></p>
-              </div>
-            </div>
-            <div class='row top'>
-              <div class="col-sm-12 col-xs-12">
-                  <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
-              </div>
-            </div>
-        </div>
+    <p id="simple-pages-breadcrumbs"><span><?php echo simple_pages_display_breadcrumbs(null, ' / '); ?></span></p>
+    <div class='top'>
+        <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
     </div>
-
-
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class='row content'>

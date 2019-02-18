@@ -41,7 +41,7 @@
             <li><a href="">Atelier presenteren en programmeren</a></li>
           </ul>
           <div class="about-button">
-            <a href="<?php echo url("over-libis");?>">Lees meer over de 4 ateliers</a>
+            <a href="<?php echo url("");?>">Lees meer over de 4 ateliers</a>
           </div>
         </div>
         </div>

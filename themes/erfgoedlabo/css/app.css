@@ -7684,7 +7684,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #333 !important;
+  color: #333;
 }
 
 header {
@@ -8043,6 +8043,10 @@ header {
   color: white;
 }
 
+.home .home-block a:hover {
+  color: white;
+}
+
 .home .home-image-1 {
   background: url("../images/ateliers.jpg") no-repeat bottom center/cover;
   background-position: 20% 50%;
@@ -8271,13 +8275,15 @@ header {
   max-height: 50px;
 }
 
-.breadcrumbs #simple-pages-breadcrumbs {
+#simple-pages-breadcrumbs {
   margin: 0;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-bottom: 0.6rem;
 }
 
-.breadcrumbs #simple-pages-breadcrumbs span {
-  padding: 10px 0;
-  font-size: 0.95rem;
+#simple-pages-breadcrumbs a {
+  color: #8e5197;
 }
 
 .item-section {
@@ -8385,12 +8391,14 @@ header {
   background: white;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  min-height: 55vw;
 }
 
 @media (max-width: 767px) {
   .exhibit-show-section,
   .simple-page-section {
     padding-top: 1.5rem;
+    min-height: 0px;
   }
 }
 
@@ -8485,7 +8493,7 @@ header {
 
 .exhibit-show-section .page .top h1,
 .simple-page-section .page .top h1 {
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 1rem;
   line-height: 1.4;
 }

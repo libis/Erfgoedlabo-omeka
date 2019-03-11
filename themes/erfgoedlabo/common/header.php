@@ -42,6 +42,7 @@
     <header role="banner">
       <div class="container">
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded <?php echo $smallheader;?> <?php echo $style['kleur'];?>">
+          <a href="<?php echo url("/");?>" class="navbar-brand"><img src="<?php echo img('logo.png');?>"></a>
           <button class="navbar-toggler navbar-toggler-right justify-content-end" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class='material-icons'>&#xE5D2;</i>
           </button>

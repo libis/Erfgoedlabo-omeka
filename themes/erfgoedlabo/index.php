@@ -3,12 +3,13 @@
 <div class="jumbotron">
   <div class='container' role="main" tabindex="-1">
       <div class="row">
-        <div class="co-slogan col-md-4">
+        <div class="co-slogan col-lg-4 col-lg-3">
           <div class="title">
-            <h1>Erfgoed<br><span>labo</span></h1>
+            <!--<h1>Erfgoed<br><span>labo</span></h1>-->
+            <a href="<?php echo url("/");?>"></a><img src="<?php echo img('logo.png');?>"></a>
           </div>
         </div>
-        <div class="co-slogan col-md-6">
+        <div class="co-slogan offset-md-1 col-md-10 offset-lg-1 col-lg-6">
           <div class="slogan">
             <?php if ( $description = option('description')): ?>
             <p><span><?php echo $description; ?></span>
@@ -55,7 +56,7 @@
     <div class="row">
       <?php $projects = get_records("Item",array('sort_field' => 'added', 'sort_dir' => 'd',"type" => "project"),3);?>
         <?php foreach($projects as $project):?>
-          <div class="co col-md-6 col-lg-4">
+          <div class="co col-sm-6 col-md-6 col-lg-4">
               <a class="block-link" href="<?php echo record_url($project);?>">
                 <div class="col-content">
                   <?php echo item_image('square_thumbnail', array(), 0, $project);?>

@@ -17,7 +17,7 @@
             <?php endif; ?>
             <p>Het Erfgoedlabo Leuven is het netwerk van de professionele culturele erfgoedactoren. In dialoog met de brede erfgoedsector bundelen ze hun krachten door expertisedeling, overleg en samenwerking.</p>
             <div class="about-button">
-              <a href="<?php echo url("about");?>">Lees meer</a>
+              <a href="<?php echo url("over");?>">Lees meer</a>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
             <li><a href="">Atelier presenteren en programmeren</a></li>
           </ul>
           <div class="about-button">
-            <a href="<?php echo url("");?>">Lees meer over de 4 ateliers</a>
+            <a href="<?php echo url("over");?>#ateliers">Lees meer over de 4 ateliers</a>
           </div>
         </div>
         </div>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-overlay">
                     <h2><?php echo metadata($project, array("Dublin Core", "Title"));?></h2>
-                    <p><?php echo metadata($project, array("Dublin Core", "Description"));?></p>
+                    <p><?php echo metadata($project, array("Dublin Core", "Description"), array('snippet' => 150));?></p>
                 </div>
               </a>
           </div>

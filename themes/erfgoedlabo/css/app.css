@@ -7699,6 +7699,10 @@ header {
   }
 }
 
+#home .navbar-brand {
+  display: none;
+}
+
 .navbar {
   background: transparent;
   border-bottom: none;
@@ -7711,7 +7715,7 @@ header {
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2.5rem;
-  display: none;
+  margin-right: 2rem;
 }
 
 .navbar .navbar-brand span {

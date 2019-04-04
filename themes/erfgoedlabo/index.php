@@ -65,7 +65,7 @@
                     $url = file_display_url($files[0],'thumbnail');
                   endif;
                 ?>
-                <div class="col-content" style="height:300px;background:url(<?php echo $url;?>);background-size: cover;margin-bottom: 1rem;)">
+                <div class="col-content" style="height:250px;background:url(<?php echo $url;?>);background-size: cover;margin-bottom: 1rem;)">
 
                 </div>
                 <div class="col-overlay">

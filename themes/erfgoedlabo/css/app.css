@@ -7859,7 +7859,7 @@ header {
   background: none;
   padding: 0px;
   margin-left: -4px;
-  border: none;
+  border: 1px solid #68ba98;
   color: #666;
 }
 
@@ -8598,6 +8598,13 @@ header {
 .exhibit-show-section .content p,
 .simple-page-section .content p {
   margin-bottom: 2rem;
+}
+
+.exhibit-show-section .content .btn,
+.simple-page-section .content .btn {
+  background: #68ba98;
+  color: white;
+  border-radius: 5px;
 }
 
 .exhibit-show-section .side,

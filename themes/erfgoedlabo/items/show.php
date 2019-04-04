@@ -23,6 +23,11 @@
           <div id="itemfiles" class="element">
               <div class="element-text"><?php echo item_image_gallery(array('linkWrapper' => array('wrapper' => null,'class' => 'col-xs-12 image')),'thumbnail'); ?></div>
           </div>
+          <?php
+            if(metadata('item', array('Dublin Core', 'Rights'))):
+              echo "<small><em>".metadata('item', array('Dublin Core', 'Rights'))."</em></small>";
+            endif;
+          ?>
         </div>
         <?php endif;?>
     </div>

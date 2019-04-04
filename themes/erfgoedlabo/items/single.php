@@ -5,7 +5,7 @@
         <div id="itemfiles" class="element">
             <div class="element-text">
               <?php    echo link_to_item(
-                      item_image(null, array(), 0, $item),
+                      item_image('thumbnail', array(), 0, $item),
                       array('class' => 'image'), 'show', $item
                   );
               ?>

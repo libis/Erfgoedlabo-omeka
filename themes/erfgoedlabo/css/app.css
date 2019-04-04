@@ -7703,6 +7703,12 @@ header {
   display: none;
 }
 
+@media (max-width: 991px) {
+  #home .navbar-brand {
+    display: block;
+  }
+}
+
 .navbar {
   background: transparent;
   border-bottom: none;
@@ -7729,13 +7735,14 @@ header {
 
 @media (max-width: 991px) {
   .navbar .navbar-brand {
-    display: block;
+    display: inline;
   }
 }
 
 .navbar .navbar-toggler {
   color: #B3B6BB;
   height: auto;
+  cursor: pointer;
   top: 2.3rem !important;
   border: none;
   right: 28px;

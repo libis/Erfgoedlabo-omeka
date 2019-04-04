@@ -47,15 +47,13 @@
             <i class='material-icons'>&#xE5D2;</i>
           </button>
 
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <div class="collapse" id="navbarSupportedContent">
             <?php echo public_nav_main_bootstrap();?>
           </div>
           <a class="navbar-toggler-right search-toggle" href="#search"><i class="material-icons">search</i></a>
         </nav>
       </div>
-      <div class="collapse" id="navbarToggler">
-        <?php echo public_nav_main(array('role' => 'navigation')) -> setUlClass('mr-auto mt-2 mt-md-0 navbar-nav'); ?>
-      </div>
+
     </header>
     <div id="search">
         <button type="button" class="close"><i class='material-icons'>&#xE5CD;</i></button>

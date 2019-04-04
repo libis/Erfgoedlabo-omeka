@@ -53,7 +53,7 @@
           <a class="navbar-toggler-right search-toggle" href="#search"><i class="material-icons">search</i></a>
         </nav>
       </div>
-
+    
     </header>
     <div id="search">
         <button type="button" class="close"><i class='material-icons'>&#xE5CD;</i></button>

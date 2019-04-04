@@ -7709,6 +7709,20 @@ header {
   }
 }
 
+#navbarSupportedContent.collapse {
+  display: block;
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent.collapse {
+    display: none;
+  }
+}
+
+#navbarSupportedContent.show {
+  display: block !important;
+}
+
 .navbar {
   background: transparent;
   border-bottom: none;

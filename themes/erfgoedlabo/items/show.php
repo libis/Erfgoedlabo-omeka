@@ -6,7 +6,7 @@
     <!-- Content -->
     <p id="simple-pages-breadcrumbs">
       <span><a href="<?php echo url('/');?>">Home</a></span>
-       / <span><a href="<?php echo $type;?>"><?php echo $type;?></a></span>
+       / <span><a href="<?php echo url('projecten');?>">Projecten</a></span>
        / <?php echo metadata('item', array('Dublin Core', 'Title')); ?>
     </p>
     <div class='top'>

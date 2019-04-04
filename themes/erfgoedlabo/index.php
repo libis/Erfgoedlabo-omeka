@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-overlay">
                     <h2><?php echo metadata($project, array("Dublin Core", "Title"));?></h2>
-                    <p><?php echo metadata($project, array("Dublin Core", "Description"), array('snippet' => 150));?></p>
+                    <p><?php echo metadata($project, array("Dublin Core", "Subject"));?></p>
                 </div>
               </a>
           </div>

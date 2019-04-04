@@ -17,7 +17,7 @@
       <div class='content'>
         <?php
         $title = metadata($item, 'display_title');
-        $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+        $description = metadata($item, array('Dublin Core', 'Subject'));
         ?>
         <h3><?php echo link_to($item, 'show', $title); ?></h3>
 

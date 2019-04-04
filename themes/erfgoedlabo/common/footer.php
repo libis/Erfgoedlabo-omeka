@@ -14,8 +14,8 @@
                     <div class="col-xs-12 col-xl-12">
                       <ul>
                           <li><a href="<?php echo url("/");?>">Home</a></li>
-                          <li><a href="<?php echo url("contact");?>">Contact</a></li>
-                          <li><a href="">Partners</a></li>
+                          <!--<li><a href="<?php echo url("contact");?>">Contact</a></li>-->
+                          <li><a href="<?php echo url("/partners");?>">Partners</a></li>
                           <li class="copyright">© LIBIS</li>
                       </ul>
                     </div>

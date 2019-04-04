@@ -58,8 +58,15 @@
         <?php foreach($projects as $project):?>
           <div class="co col-sm-6 col-md-6 col-lg-4">
               <a class="block-link" href="<?php echo record_url($project);?>">
-                <div class="col-content">
-                  <?php echo item_image('square_thumbnail', array(), 0, $project);?>
+                <?php
+                  $files = $project->Files;
+                  $url = "";
+                  if($files):
+                    $url = file_display_url($files[0],'thumbnail');
+                  endif;
+                ?>
+                <div class="col-content" style="height:300px;background:url(<?php echo $url;?>);background-size: cover;margin-bottom: 1rem;)">
+
                 </div>
                 <div class="col-overlay">
                     <h2><?php echo metadata($project, array("Dublin Core", "Title"));?></h2>

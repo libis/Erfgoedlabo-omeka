@@ -19,12 +19,6 @@ $searchRecordTypes = get_search_record_types();
                 <?php if ($total_results): ?>
                 <?php echo pagination_links(); ?>
                 <table id="search-results">
-                    <thead>
-                        <tr>
-                            <th><?php echo __('Record Type');?></th>
-                            <th><?php echo __('Title');?></th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
                         <?php foreach (loop('search_texts') as $searchText): ?>
@@ -32,10 +26,7 @@ $searchRecordTypes = get_search_record_types();
                         <?php $recordType = $searchText['record_type']; ?>
                         <?php set_current_record($recordType, $record); ?>
                         <tr class="<?php echo strtolower($filter->filter($recordType)); ?>">
-                            <td>
-                                <?php echo $searchRecordTypes[$recordType]; ?>
-                            </td>
-                            <td>
+                            <td valign="top">
                                 <?php if ($recordImage = record_image($recordType)): ?>
                                     <?php echo link_to($record, 'show', $recordImage, array('class' => 'image')); ?>
                                 <?php endif; ?>

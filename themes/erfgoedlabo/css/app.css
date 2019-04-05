@@ -7669,7 +7669,7 @@ body {
   background: #eee;
 }
 
-p {
+p, ul, ol {
   font-weight: 300;
 }
 
@@ -8502,6 +8502,11 @@ header {
 .exhibit-show-section .page,
 .simple-page-section .page {
   margin-bottom: 1rem;
+}
+
+.exhibit-show-section .page a,
+.simple-page-section .page a {
+  border-bottom: 1px solid #68ba98 !important;
 }
 
 .exhibit-show-section .page .image,

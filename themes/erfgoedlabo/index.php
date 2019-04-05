@@ -36,13 +36,13 @@
           <h2>Ateliers</h2>
           <p>De werking vertaalt zich in 4 ateliers. Hier werken de leden structureel of projectmatig samen aan de belangrijkste thema’s. Participatie loopt als een rode draad door alle ateliers.</p>
           <ul>
-            <li><a href="">Atelier behouden en borgen</a></li>
-            <li><a href="">Atelier collectiebeleid</a></li>
-            <li><a href="">Digitaal atelier</a></li>
-            <li><a href="">Atelier presenteren en programmeren</a></li>
+            <li>Atelier behouden en borgen</li>
+            <li>Atelier collectiebeleid</li>
+            <li>Digitaal atelier</li>
+            <li>Atelier presenteren en programmeren</li>
           </ul>
           <div class="about-button">
-            <a href="<?php echo url("atelier");?>">Lees meer over de 4 ateliers</a>
+            <a href="<?php echo url("ateliers");?>">Lees meer over de 4 ateliers</a>
           </div>
         </div>
         </div>

@@ -8504,6 +8504,11 @@ header {
   margin-bottom: 1rem;
 }
 
+.exhibit-show-section .page li,
+.simple-page-section .page li {
+  margin-bottom: 10px;
+}
+
 .exhibit-show-section .page a,
 .simple-page-section .page a {
   border-bottom: 1px solid #68ba98 !important;

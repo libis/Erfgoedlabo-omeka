@@ -30,13 +30,12 @@
 
     <!-- Stylesheets -->
     <?php
-      queue_css_file(array('iconfonts', 'app'));
+      queue_css_file(array('iconfonts', 'app.min'));
       echo head_css();
       echo theme_header_background();
     ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <header role="banner">
@@ -53,7 +52,7 @@
           <a class="navbar-toggler-right search-toggle" href="#search"><i class="material-icons">search</i></a>
         </nav>
       </div>
-    
+
     </header>
     <div id="search">
         <button type="button" class="close"><i class='material-icons'>&#xE5CD;</i></button>

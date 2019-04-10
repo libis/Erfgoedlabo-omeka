@@ -16,7 +16,7 @@
     <div class="col-md-8 col-sm-12">
       <div class='content'>
         <?php
-        $title = metadata($item, 'display_title');
+        $title = metadata($item, array('Dublin Core', 'Title'));
         $description = metadata($item, array('Dublin Core', 'Subject'));
         ?>
         <h3><?php echo link_to($item, 'show', $title); ?></h3>

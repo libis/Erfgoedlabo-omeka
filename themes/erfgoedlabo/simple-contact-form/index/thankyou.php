@@ -7,11 +7,9 @@
 					<div class='row breadcrumbs'>
 						<div class="col-sm-12 col-xs-12">
 							<p id="simple-pages-breadcrumbs">
-								<span>
-									<a href="http://libis.be/">Startpagina</a>
-									> Contact
-									</p>
-								</span></p>
+					      <span><a href="<?php echo url('/');?>">Home</a></span>
+					       / <?php echo html_escape(get_option('simple_contact_form_contact_page_title')); ?>
+					    </p>
 						</div>
 					</div>
 					<div class='row content'>

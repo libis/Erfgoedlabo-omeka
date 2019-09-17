@@ -54,7 +54,7 @@
   <div class='container'>
     <h1>Projecten </h1>
     <div class="row">
-      <?php $projects = get_records("Item",array('sort_field' => modified', 'sort_dir' => 'd',"type" => "project"),3);?>
+      <?php $projects = get_records("Item",array('sort_field' => 'modified', 'sort_dir' => 'd',"type" => "project"),3);?>
         <?php foreach($projects as $project):?>
           <div class="co col-sm-6 col-md-6 col-lg-4">
               <a class="block-link" href="<?php echo record_url($project);?>">

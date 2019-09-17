@@ -113,7 +113,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
 
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');
-            $mail->setBodyText($formMessage);
+            $mail->setBodyHtml($formMessage);
             $mail->setFrom($formEmail, $formName);
             $mail->addTo($forwardToEmail);
             $mail->setSubject(get_option('site_title') . ' - ' . __('Inschrijving studiedag'));

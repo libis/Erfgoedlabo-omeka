@@ -21,6 +21,8 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $workshop = isset($_POST['workshop']) ? $_POST['workshop'] : '';
+        $reserve = isset($_POST['reserve']) ? $_POST['reserve'] : '';
+        $attest = isset($_POST['attest']) ? $_POST['attest'] : '';
 
         $captchaObj = $this->_setupCaptcha();
 
@@ -40,7 +42,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
             $captcha = '';
         }
 
-        $this->view->assign(compact('name','firstname','organisation','tel','address','email','workshop', 'captcha'));
+        $this->view->assign(compact('name','firstname','organisation','tel','address','email','workshop','reserve','attest','captcha'));
     }
 
     public function thankyouAction()
@@ -57,6 +59,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $workshop = isset($_POST['workshop']) ? $_POST['workshop'] : '';
+        $reserve = isset($_POST['reserve']) ? $_POST['reserve'] : '';
+        $attest = isset($_POST['attest']) ? $_POST['attest'] : '';
+
         $msg = $this->getRequest()->getPost('message');
         $email = $this->getRequest()->getPost('email');
         // ZF ReCaptcha ignores the 1st arg.
@@ -82,12 +87,15 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
             $this->_helper->flashMessenger(__('Je hebt geen geldig e-mailadres opgegeven.'));
             $valid = false;
         } else if ($workshop == '') {
-          $this->_helper->flashMessenger(__('Je hebt geen workshops geselecteerd.'));
+          $this->_helper->flashMessenger(__('Je hebt geen sessies geselecteerd.'));
           $valid = false;
         }else if(sizeof($workshop) != 2){
 
-          $this->_helper->flashMessenger(__('Gelieve 2 workshops te selecteren.'));
+          $this->_helper->flashMessenger(__('Gelieve 2 sessies te selecteren.'));
           $valid = false;
+        }  else if (empty($reserve)) {
+            $this->_helper->flashMessenger(__('Gelieve een reservekeuze te maken.'));
+            $valid = false;
         }
 
         return $valid;
@@ -109,7 +117,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
           "<strong>Adres</strong><br />".$post['address']."<br />".
           "<strong>Telefoonnummer</strong><br />".$post['tel']."<br />".
           "<strong>E-mailadres</strong><br />".$post['email']."<br />";
-          "<strong>Workshops</strong><br />".implode(', ',$post['workshop']);
+          "<strong>Workshops</strong><br />".implode(', ',$post['workshop'])."<br />";
+          "<strong>Reservekeuze</strong><br />".$post['reserve']."<br />";
+          "<strong>Attest</strong><br />".$post['attest'];
 
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');
@@ -117,7 +127,33 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
             $mail->setFrom($formEmail, $formName);
             $mail->addTo($forwardToEmail);
             $mail->setSubject(get_option('site_title') . ' - ' . __('Inschrijving studiedag'));
-            $mail->send();
+            //$mail->send();
         }
+
+        $organisation = isset($post['organisation']) ? $post['organisation'] : '';
+        $address = isset($post['address']) ? $post['address'] : '';
+        $tel = isset($post['tel']) ? $post['tel'] : '';
+        $email = isset($post['email']) ? $post['email'] : '';
+        $workshop = isset($post['workshop']) ? $post['workshop'] : '';
+        $reserve = isset($post['reserve']) ? $post['reserve'] : '';
+        $attest = isset($post['attest']) ? $post['attest'] : '';
+
+        $cvsData = "\n" . $formName . "," .
+          $organisation . ",\"" .
+          $address . "\"," .
+          $tel . "," .
+          $email . ",\"" .
+          implode(', ',$workshop) . "\"," .
+          $reserve . "," .
+          $attest;
+
+        $fp = fopen(SIMPLE_CONTACT_FORM_DIR."/files/results.csv","a"); // $fp is now the file pointer to file $filename
+
+            if($fp)
+            {
+                fwrite($fp,$cvsData); // Write information to the file
+                fclose($fp); // Close the file
+            }
+
     }
 }

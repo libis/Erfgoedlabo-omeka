@@ -2,7 +2,7 @@
 <style>
 	h3{
 		float:left;
-		width: 200px;
+		width: 220px;
 	}
 
 	.inputs{
@@ -11,7 +11,7 @@
 
 	.textinput{
 		max-width: 500px;
-		min-width: 250px;
+		min-width: 280px;
 	}
 </style>
 	<div class="content-wrapper simple-page-section ">
@@ -76,15 +76,36 @@
 										</div>
 
 										<div class="field" >
-											<h3 style="margin-bottom:6px;">Workshop's</h3>
+											<h3 style="margin-bottom:6px;"><label>Keuze werksessies (NM)</label></h3>
 											<div class='inputs' >
 												<p style="margin-bottom:5px;">
-													Selecteer 2 verschillende workshops
+													Selecteer je 2 voorkeursthema's
 												</p>
-												<input value="preventie" type="checkbox" name="workshop[]"> 	Preventie en planning<br />
+												<input value="preventie" type="checkbox" name="workshop[]"> Preventie en planning<br />
 												<input value="eerste hulp" type="checkbox" name="workshop[]"> Eerste hulp en solidariteit<br />
 												<input value="kostenplaatje" type="checkbox" name="workshop[]"> Kostenplaatje en verzekering<br />
 												<input value="wat erna" type="checkbox" name="workshop[]"> Wat erna?
+											</div>
+										</div>
+
+										<div class="field" >
+											<h3 style="margin-bottom:6px;"></h3>
+											<div class='inputs' >
+												<p style="margin-bottom:5px;">
+													Selecteer één reservekeuze (indien voorkeurthema's volzet zijn)
+												</p>
+												<input value="preventie" type="radio" name="reserve"> Preventie en planning<br />
+												<input value="eerste hulp" type="radio" name="reserve"> Eerste hulp en solidariteit<br />
+												<input value="kostenplaatje" type="radio" name="reserve"> Kostenplaatje en verzekering<br />
+												<input value="wat erna" type="radio" name="reserve"> Wat erna?
+											</div>
+										</div>
+
+										<div class="field" >
+											<h3 style="margin-bottom:6px;"><label>Attest nodig?</label></h3>
+											<div class='inputs' >
+														<input value="ja" type="checkbox" name="attest">
+
 											</div>
 										</div>
 
@@ -99,6 +120,9 @@
 										  <?php echo $this->formSubmit('send', 'Verstuur'); ?>
 										</div>
 						    </fieldset>
+								<p>
+									Inschrijven vóór 15 november 2019 via het online formulier. Inschrijving is pas definitief na storting van 20 euro op rekening BE60 7340 0666 0370 met volgende vermelding in het veld vrije mededeling: ‘400/0017/88879’ en de naam van de deelnemer.
+								</p>
 							</form>
 					</div>
 				</div>

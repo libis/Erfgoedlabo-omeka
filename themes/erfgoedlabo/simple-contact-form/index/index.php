@@ -79,12 +79,12 @@
 											<h3 style="margin-bottom:6px;"><label>Keuze werksessies (NM)</label></h3>
 											<div class='inputs' >
 												<p style="margin-bottom:5px;">
-													Selecteer je 2 voorkeursthema's
+													Selecteer je 2 voorkeurthema's
 												</p>
 												<input value="preventie" type="checkbox" name="workshop[]"> Preventie en planning<br />
 												<input value="eerste hulp" type="checkbox" name="workshop[]"> Eerste hulp en solidariteit<br />
 												<input value="kostenplaatje" type="checkbox" name="workshop[]"> Kostenplaatje en verzekering<br />
-												<input value="wat erna" type="checkbox" name="workshop[]"> Wat erna?
+												<input value="wat na een calamiteit" type="checkbox" name="workshop[]"> Wat na een calamiteit?
 											</div>
 										</div>
 
@@ -97,7 +97,7 @@
 												<input value="preventie" type="radio" name="reserve"> Preventie en planning<br />
 												<input value="eerste hulp" type="radio" name="reserve"> Eerste hulp en solidariteit<br />
 												<input value="kostenplaatje" type="radio" name="reserve"> Kostenplaatje en verzekering<br />
-												<input value="wat erna" type="radio" name="reserve"> Wat erna?
+												<input value="Wat na een calamiteit" type="radio" name="reserve"> Wat na een calamiteit?
 											</div>
 										</div>
 

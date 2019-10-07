@@ -127,7 +127,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
             $mail->setFrom($formEmail, $formName);
             $mail->addTo($forwardToEmail);
             $mail->setSubject(get_option('site_title') . ' - ' . __('Inschrijving studiedag'));
-            //$mail->send();
+            $mail->send();
         }
 
         $organisation = isset($post['organisation']) ? $post['organisation'] : '';

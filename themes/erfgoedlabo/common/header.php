@@ -30,8 +30,10 @@
 
     <!-- Stylesheets -->
     <?php
-      queue_css_file(array('iconfonts', 'app.min'));
+      queue_js_file(array("slick"));
+      queue_css_file(array('iconfonts', 'app.min','slick','slick-theme'));
       echo head_css();
+      echo head_js();
       echo theme_header_background();
     ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,400,500,700" rel="stylesheet">

@@ -75,7 +75,7 @@
 												</div>
 										</div>
 
-										<div class="field" >
+									<!--	<div class="field" >
 											<h3 style="margin-bottom:6px;"><label>Keuze werksessies (NM)</label></h3>
 											<div class='inputs' >
 												<p style="margin-bottom:5px;">
@@ -110,7 +110,7 @@
 										</div>
 
 								</fieldset>
-
+							-->
 								<fieldset>
 										<div class="field">
 										  <?php echo $captcha; ?>
@@ -120,9 +120,9 @@
 										  <?php echo $this->formSubmit('send', 'Verstuur'); ?>
 										</div>
 						    </fieldset>
-								<p>
+								<!--<p>
 									Inschrijven vóór 15 november 2019 via het online formulier. Inschrijving is pas definitief na storting van 20 euro op rekening BE60 7340 0666 0370 met volgende vermelding in het veld vrije mededeling: ‘400/0017/88879’ en de naam van de deelnemer.
-								</p>
+								</p>-->
 							</form>
 					</div>
 				</div>

@@ -86,7 +86,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         } else if (!Zend_Validate::is($email, 'EmailAddress')) {
             $this->_helper->flashMessenger(__('Je hebt geen geldig e-mailadres opgegeven.'));
             $valid = false;
-        } else if ($workshop == '') {
+        }/* else if ($workshop == '') {
           $this->_helper->flashMessenger(__('Je hebt geen sessies geselecteerd.'));
           $valid = false;
         }else if(sizeof($workshop) != 2){
@@ -96,7 +96,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         }  else if (empty($reserve)) {
             $this->_helper->flashMessenger(__('Gelieve een reservekeuze te maken.'));
             $valid = false;
-        }
+        }*/
 
         return $valid;
     }
@@ -117,9 +117,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
           "<strong>Adres</strong><br />".$post['address']."<br />".
           "<strong>Telefoonnummer</strong><br />".$post['tel']."<br />".
           "<strong>E-mailadres</strong><br />".$post['email']."<br />";
-          "<strong>Workshops</strong><br />".implode(', ',$post['workshop'])."<br />";
+          /*"<strong>Workshops</strong><br />".implode(', ',$post['workshop'])."<br />";
           "<strong>Reservekeuze</strong><br />".$post['reserve']."<br />";
-          "<strong>Attest</strong><br />".$post['attest'];
+          "<strong>Attest</strong><br />".$post['attest'];*/
 
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');

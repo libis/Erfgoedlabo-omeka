@@ -1,22 +1,18 @@
 <?php
 /**
  * Omeka
- * 
+ *
  * @copyright Copyright 2007-2012 Roy Rosenzweig Center for History and New Media
  * @license http://www.gnu.org/licenses/gpl-3.0.txt GNU GPLv3
  */
 
 /**
  * Set up the default database connection for Omeka.
- * 
+ *
  * @package Omeka\Application\Resource
  */
 class Omeka_Application_Resource_Db extends Zend_Application_Resource_Db
 {
-    /**
-     * Command to run at connect time; currently sets the SQL mode
-     */
-    const INIT_COMMAND = "SET SESSION sql_mode='STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'";
 
     /**
      * Path to the database configuration file.
@@ -64,7 +60,7 @@ class Omeka_Application_Resource_Db extends Zend_Application_Resource_Db
             $connectionParams['profiler'] = true;
         }
 
-        $connectionParams['driver_options']['MYSQLI_INIT_COMMAND'] = self::INIT_COMMAND;
+        //$connectionParams['driver_options']['MYSQLI_INIT_COMMAND'] = self::INIT_COMMAND;
 
         $dbh = Zend_Db::factory('Mysqli', $connectionParams);
 
@@ -83,7 +79,7 @@ class Omeka_Application_Resource_Db extends Zend_Application_Resource_Db
 
     /**
      * Set the path to the database configuration file.
-     * 
+     *
      * Allows {@link $_iniPath} to be set by the app configuration.
      *
      * @param string $path

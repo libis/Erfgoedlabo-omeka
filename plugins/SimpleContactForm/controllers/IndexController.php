@@ -106,6 +106,8 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
 
     protected function sendEmailNotification($formEmail, $formName, $post)
     {
+
+
         //notify the admin
         //use the admin email specified in the plugin configuration.
         $forwardToEmail = get_option('simple_contact_form_forward_to_email');
@@ -114,12 +116,12 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
           "<strong>Organisatie</strong><br />".$post['organisation']."<br />".
           "<strong>Adres</strong><br />".$post['address']."<br />".
           "<strong>Telefoonnummer</strong><br />".$post['tel']."<br />".
-          "<strong>E-mailadres</strong><br />".$post['email']."<br />";
-          "<strong>Werksessie 1</strong><br />".$post['workshop']."<br />";
-          "<strong>Werksessie 2</strong><br />".$post['workshop2']."<br />";
-          "<strong>Attest</strong><br />".$post['attest']."<br />";;
+          "<strong>E-mailadres</strong><br />".$post['email']."<br />".
+          "<strong>Werksessie 1</strong><br />".$post['workshop']."<br />".
+          "<strong>Werksessie 2</strong><br />".$post['workshop2']."<br />".
+          "<strong>Attest</strong><br />".$post['attest']."<br />".
           "<strong>Vraag</strong><br />".$post['vraag'];
-
+          var_dump($formMessage);die();
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');
             $mail->setBodyHtml($formMessage);

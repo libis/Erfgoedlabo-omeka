@@ -78,9 +78,9 @@
 									<div class="field" >
 											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 1: In welke klimaatcondities moet je jouw collectie bewaren?  Kies jouw collectieprofiel:</label></h3>
 											<div class='inputs' >
-												<input value="museale" type="radio" name="workshop[]"> Museale collectie<br />
-												<input value="archief" type="radio" name="workshop[]"> Archiefcollectie<br />
-												<input value="bibliotheek" type="radio" name="workshop[]"> Bibliotheekcollectie<br />
+												<input value="museale" type="radio" name="workshop"> Museale collectie<br />
+												<input value="archief" type="radio" name="workshop"> Archiefcollectie<br />
+												<input value="bibliotheek" type="radio" name="workshop"> Bibliotheekcollectie<br />
 												</div>
 										</div>
 
@@ -88,9 +88,9 @@
 											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 2: Welke passieve ingrepen zijn mogelijk ten aanzien van luchtkwaliteit en binnenklimaat? Kies jouw collectieprofiel:</label></h3>
 
 											<div class='inputs' >
-												<input value="museale" type="radio" name="workshop2[]"> Museale collectie<br />
-												<input value="archief" type="radio" name="workshop2[]"> Archiefcollectie<br />
-												<input value="bibliotheek" type="radio" name="workshop2[]"> Bibliotheekcollectie<br />
+												<input value="museale" type="radio" name="workshop2"> Museale collectie<br />
+												<input value="archief" type="radio" name="workshop2"> Archiefcollectie<br />
+												<input value="bibliotheek" type="radio" name="workshop2"> Bibliotheekcollectie<br />
 												</div>
 										</div>
 

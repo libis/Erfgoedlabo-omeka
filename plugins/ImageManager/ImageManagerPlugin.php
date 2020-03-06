@@ -123,7 +123,7 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
                     mode : 'exact',
                     elements: '<?php if ($tiny_mce) echo 'simple-pages-text'; ?>',
                     // Add plugins:
-                    plugins: 'media,paste,inlinepopups',
+                    plugins: 'media,paste',
                     // Configure theme:
                     theme: 'modern',
                     height : "480",

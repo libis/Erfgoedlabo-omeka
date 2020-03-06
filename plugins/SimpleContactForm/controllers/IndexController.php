@@ -121,7 +121,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
           "<strong>Werksessie 2</strong><br />".$post['workshop2']."<br />".
           "<strong>Attest</strong><br />".$post['attest']."<br />".
           "<strong>Vraag</strong><br />".$post['vraag'];
-          var_dump($formMessage);die();
+          
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');
             $mail->setBodyHtml($formMessage);

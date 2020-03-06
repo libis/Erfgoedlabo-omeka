@@ -21,9 +21,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $workshop = isset($_POST['workshop']) ? $_POST['workshop'] : '';
-        $reserve = isset($_POST['workshop2']) ? $_POST['reserve'] : '';
+        $workshop2 = isset($_POST['workshop2']) ? $_POST['workshop2'] : '';
         $attest = isset($_POST['attest']) ? $_POST['attest'] : '';
-        $attest = isset($_POST['vraag']) ? $_POST['attest'] : '';
+        $vraag = isset($_POST['vraag']) ? $_POST['vraag'] : '';
 
         $captchaObj = $this->_setupCaptcha();
 

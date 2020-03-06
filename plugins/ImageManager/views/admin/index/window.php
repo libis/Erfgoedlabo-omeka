@@ -1,12 +1,12 @@
-<?php     
-    queue_css_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css');
+<?php
+    queue_css_url('//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css');
     queue_css_file('theme');
     queue_css_file('elfinder.min');
-    echo head_css();    
-        
+    echo head_css();
+
     queue_js_file('elFinder/js/elFinder.min');
-    queue_js_file('vendor/tiny_mce/tiny_mce_popup');     
-    queue_js_file('imageManager');    
+    queue_js_file('vendor/tiny_mce/tiny_mce_popup');
+    queue_js_file('imageManager');
     echo head_js();
 ?>
 <script type="text/javascript">
@@ -43,9 +43,9 @@
       url: '<?php echo url('/image-manager/connector') ?>',  // connector URL
       getFileCallback: function(file) { // editor callback
         // Require `commandsOptions.getfile.onlyURL = false` (default)
-        FileBrowserDialogue.mySubmit(file.url); // pass selected file path to TinyMCE 
+        FileBrowserDialogue.mySubmit(file.url); // pass selected file path to TinyMCE
       }
-    }).elfinder('instance');      
+    }).elfinder('instance');
   });
 </script>
 

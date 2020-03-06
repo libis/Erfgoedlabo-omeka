@@ -8,7 +8,7 @@
  */
 
 // Define the current version of Omeka.
-define('OMEKA_VERSION', '2.6.1');
+define('OMEKA_VERSION', '2.7.1');
 
 // Define the application environment.
 if (!defined('APPLICATION_ENV')) {
@@ -49,6 +49,7 @@ define('SCRIPTS_DIR', APP_DIR . '/scripts');
 if ((isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] === true))
     || (isset($_SERVER['HTTP_SCHEME']) && $_SERVER['HTTP_SCHEME'] == 'https')
     || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)
+    || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
 ) {
     $scheme = 'https';
 } else {
@@ -122,14 +123,6 @@ if (PHP_SAPI !== 'cli' && extension_loaded('zlib')) {
     ini_set('zlib.output_compression_level', '5');
 }
 
-// Strip slashes from superglobals to avoid problems with PHP's magic_quotes.
-if (get_magic_quotes_gpc()) {
-    $_GET = stripslashes_deep($_GET);
-    $_POST = stripslashes_deep($_POST);
-    $_COOKIE = stripslashes_deep($_COOKIE);
-    $_REQUEST = stripslashes_deep($_REQUEST);
-}
-
 // Add the libraries and models directories to the include path.
 set_include_path(LIB_DIR. PATH_SEPARATOR . MODEL_DIR . PATH_SEPARATOR . get_include_path());
 
@@ -147,14 +140,3 @@ $autoloader->register();
 
 // Define the theme directory path.
 define('THEME_DIR', defined('ADMIN') ? ADMIN_THEME_DIR : PUBLIC_THEME_DIR);
-
-/**
- * Strip slashes recursively.
- *
- * @param array|string $value
- * @return array
- */
-function stripslashes_deep($value)
-{
-    return is_array($value) ? array_map('stripslashes_deep', $value) : stripslashes($value);
-}

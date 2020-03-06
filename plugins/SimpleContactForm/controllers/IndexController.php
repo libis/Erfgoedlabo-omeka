@@ -21,8 +21,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $workshop = isset($_POST['workshop']) ? $_POST['workshop'] : '';
-        $reserve = isset($_POST['reserve']) ? $_POST['reserve'] : '';
+        $reserve = isset($_POST['workshop2']) ? $_POST['reserve'] : '';
         $attest = isset($_POST['attest']) ? $_POST['attest'] : '';
+        $attest = isset($_POST['vraag']) ? $_POST['attest'] : '';
 
         $captchaObj = $this->_setupCaptcha();
 
@@ -42,7 +43,7 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
             $captcha = '';
         }
 
-        $this->view->assign(compact('name','firstname','organisation','tel','address','email','workshop','reserve','attest','captcha'));
+        $this->view->assign(compact('name','firstname','organisation','tel','address','email','workshop','workshop2','attest','vraag','captcha'));
     }
 
     public function thankyouAction()
@@ -59,8 +60,9 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($_POST['tel']) ? $_POST['tel'] : '';
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $workshop = isset($_POST['workshop']) ? $_POST['workshop'] : '';
-        $reserve = isset($_POST['reserve']) ? $_POST['reserve'] : '';
+        $workshop2 = isset($_POST['workshop2']) ? $_POST['workshop2'] : '';
         $attest = isset($_POST['attest']) ? $_POST['attest'] : '';
+        $vraag = isset($_POST['vraag']) ? $_POST['vraag'] : '';
 
         $msg = $this->getRequest()->getPost('message');
         $email = $this->getRequest()->getPost('email');
@@ -86,17 +88,13 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         } else if (!Zend_Validate::is($email, 'EmailAddress')) {
             $this->_helper->flashMessenger(__('Je hebt geen geldig e-mailadres opgegeven.'));
             $valid = false;
-        }/* else if ($workshop == '') {
-          $this->_helper->flashMessenger(__('Je hebt geen sessies geselecteerd.'));
+        } else if (empty($workshop)) {
+          $this->_helper->flashMessenger(__('Je hebt geen sessie geselecteerd.'));
           $valid = false;
-        }else if(sizeof($workshop) != 2){
-
-          $this->_helper->flashMessenger(__('Gelieve 2 sessies te selecteren.'));
-          $valid = false;
-        }  else if (empty($reserve)) {
-            $this->_helper->flashMessenger(__('Gelieve een reservekeuze te maken.'));
+        } else if (empty($workshop2)) {
+            $this->_helper->flashMessenger(__('Je hebt geen tweede sessie geselecteerd.'));
             $valid = false;
-        }*/
+        }
 
         return $valid;
     }
@@ -117,9 +115,10 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
           "<strong>Adres</strong><br />".$post['address']."<br />".
           "<strong>Telefoonnummer</strong><br />".$post['tel']."<br />".
           "<strong>E-mailadres</strong><br />".$post['email']."<br />";
-          /*"<strong>Workshops</strong><br />".implode(', ',$post['workshop'])."<br />";
-          "<strong>Reservekeuze</strong><br />".$post['reserve']."<br />";
-          "<strong>Attest</strong><br />".$post['attest'];*/
+          "<strong>Werksessie 1</strong><br />".$post['workshop']."<br />";
+          "<strong>Werksessie 2</strong><br />".$post['workshop2']."<br />";
+          "<strong>Attest</strong><br />".$post['attest']."<br />";;
+          "<strong>Vraag</strong><br />".$post['vraag'];
 
         if (!empty($forwardToEmail)) {
             $mail = new Zend_Mail('UTF-8');
@@ -135,16 +134,18 @@ class SimpleContactForm_IndexController extends Omeka_Controller_AbstractActionC
         $tel = isset($post['tel']) ? $post['tel'] : '';
         $email = isset($post['email']) ? $post['email'] : '';
         $workshop = isset($post['workshop']) ? $post['workshop'] : '';
-        $reserve = isset($post['reserve']) ? $post['reserve'] : '';
+        $workshop2 = isset($post['workshop2']) ? $post['workshop2'] : '';
         $attest = isset($post['attest']) ? $post['attest'] : '';
+        $vraag = isset($post['attest']) ? $post['vraag'] : '';
 
         $cvsData = "\n" . $formName . "," .
           $organisation . ",\"" .
           $address . "\"," .
           $tel . "," .
           $email . ",\"" .
-          implode(', ',$workshop) . "\"," .
-          $reserve . "," .
+          $workshop . "\"," .
+          $workshop2 . "," .
+          $vraag . "," .
           $attest;
 
         $fp = fopen(SIMPLE_CONTACT_FORM_DIR."/files/results.csv","a"); // $fp is now the file pointer to file $filename

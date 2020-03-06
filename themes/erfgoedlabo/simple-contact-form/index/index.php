@@ -75,42 +75,41 @@
 												</div>
 										</div>
 
-									<!--	<div class="field" >
-											<h3 style="margin-bottom:6px;"><label>Keuze werksessies (NM)</label></h3>
+									<div class="field" >
+											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 1: In welke klimaatcondities moet je jouw collectie bewaren?  Kies jouw collectieprofiel:</label></h3>
 											<div class='inputs' >
-												<p style="margin-bottom:5px;">
-													Selecteer je 2 voorkeurthema's
-												</p>
-												<input value="preventie" type="checkbox" name="workshop[]"> Preventie en planning<br />
-												<input value="eerste hulp" type="checkbox" name="workshop[]"> Eerste hulp en solidariteit<br />
-												<input value="kostenplaatje" type="checkbox" name="workshop[]"> Kostenplaatje en verzekering<br />
-												<input value="wat na een calamiteit" type="checkbox" name="workshop[]"> Wat na een calamiteit?
-											</div>
+												<input value="museale" type="radio" name="workshop[]"> Museale collectie<br />
+												<input value="archief" type="radio" name="workshop[]"> Archiefcollectie<br />
+												<input value="bibliotheek" type="radio" name="workshop[]"> Bibliotheekcollectie<br />
+												</div>
 										</div>
 
 										<div class="field" >
-											<h3 style="margin-bottom:6px;"></h3>
+											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 2: Welke passieve ingrepen zijn mogelijk ten aanzien van luchtkwaliteit en binnenklimaat? Kies jouw collectieprofiel:</label></h3>
+
 											<div class='inputs' >
-												<p style="margin-bottom:5px;">
-													Selecteer één reservekeuze (indien voorkeurthema's volzet zijn)
-												</p>
-												<input value="preventie" type="radio" name="reserve"> Preventie en planning<br />
-												<input value="eerste hulp" type="radio" name="reserve"> Eerste hulp en solidariteit<br />
-												<input value="kostenplaatje" type="radio" name="reserve"> Kostenplaatje en verzekering<br />
-												<input value="Wat na een calamiteit" type="radio" name="reserve"> Wat na een calamiteit?
-											</div>
+												<input value="museale" type="radio" name="workshop2[]"> Museale collectie<br />
+												<input value="archief" type="radio" name="workshop2[]"> Archiefcollectie<br />
+												<input value="bibliotheek" type="radio" name="workshop2[]"> Bibliotheekcollectie<br />
+												</div>
 										</div>
 
 										<div class="field" >
 											<h3 style="margin-bottom:6px;"><label>Attest nodig?</label></h3>
 											<div class='inputs' >
 														<input value="ja" type="checkbox" name="attest">
-
 											</div>
 										</div>
 
+										<div class="field">
+										<h3>Op welke vraag wil je zeker een antwoord krijgen?</h3>
+												<div class='inputs'>
+												<?php echo $this->formText('vraag', $vraag, array('class'=>'textinput')); ?>
+												</div>
+										</div>
+
 								</fieldset>
-							-->
+
 								<fieldset>
 										<div class="field">
 										  <?php echo $captcha; ?>
@@ -120,9 +119,15 @@
 										  <?php echo $this->formSubmit('send', 'Verstuur'); ?>
 										</div>
 						    </fieldset>
-								<!--<p>
-									Inschrijven vóór 15 november 2019 via het online formulier. Inschrijving is pas definitief na storting van 20 euro op rekening BE60 7340 0666 0370 met volgende vermelding in het veld vrije mededeling: ‘400/0017/88879’ en de naam van de deelnemer.
-								</p>-->
+								<h5>Betaling</h5>
+								<p>Gelieve 30 euro  over te schrijven op rekening BE60 7340 0666 0370 met vermelding van: ????????????? + naam deelnemer
+								</p>
+								<p><em>Betaling via factuur?</em><br />
+								Mail dan naam bedrijf, adres, e-mail facturatie, BTW-nr./ondernemingsnr., bestelbonnr. of referentie bestelbon (indien dit moet vermeld worden op de factuur) naar <strong>ann.boeckmans@kuleuven.be</strong>.
+								</p>
+								<p><em>Bestelbon opmaken?</em><br />
+								Graag volgende gegevens gebruiken: KU Leuven, Oude Markt 13, B-3000 Leuven, Rek. nr.: BE09 4320 0000 1157 (hoofdrekeningnr. KU Leuven), BIC: KREDBEBB, BTW-nr.: BE 0419.052.173; Ondernemingsnr.: 0419.052.173.
+								</p>
 							</form>
 					</div>
 				</div>

@@ -102,13 +102,23 @@
 										</div>
 
 										<div class="field">
-										<h3>Op welke vraag wil je zeker een antwoord krijgen?</h3>
+										<h3><label>Op welke vraag wil je zeker een antwoord krijgen?</label></h3>
 												<div class='inputs'>
 												<?php echo $this->formText('vraag', $vraag, array('class'=>'textinput')); ?>
 												</div>
 										</div>
 
 								</fieldset>
+
+								<h5>Betaling</h5>
+								<p>Gelieve 30 euro over te schrijven op rekening BE60 7340 0666 0370  met volgende vermelding in het veld vrije mededeling: 400/0019/60045 + naam deelnemer.
+								</p>
+								<p><em>Betaling via factuur?</em><br />
+								Mail dan naam bedrijf, adres, e-mail facturatie, BTW-nr./ondernemingsnr., bestelbonnr. of referentie bestelbon (indien dit moet vermeld worden op de factuur) naar <strong>ann.boeckmans@kuleuven.be</strong>.
+								</p>
+								<p><em>Bestelbon opmaken?</em><br />
+								Graag volgende gegevens gebruiken: KU Leuven, Oude Markt 13, B-3000 Leuven, Rek. nr.: BE09 4320 0000 1157 (hoofdrekeningnr. KU Leuven), BIC: KREDBEBB, BTW-nr.: BE 0419.052.173; Ondernemingsnr.: 0419.052.173.
+								</p>
 
 								<fieldset>
 										<div class="field">
@@ -119,15 +129,7 @@
 										  <?php echo $this->formSubmit('send', 'Verstuur'); ?>
 										</div>
 						    </fieldset>
-								<h5>Betaling</h5>
-								<p>Gelieve 30 euro  over te schrijven op rekening BE60 7340 0666 0370 met vermelding van: ????????????? + naam deelnemer
-								</p>
-								<p><em>Betaling via factuur?</em><br />
-								Mail dan naam bedrijf, adres, e-mail facturatie, BTW-nr./ondernemingsnr., bestelbonnr. of referentie bestelbon (indien dit moet vermeld worden op de factuur) naar <strong>ann.boeckmans@kuleuven.be</strong>.
-								</p>
-								<p><em>Bestelbon opmaken?</em><br />
-								Graag volgende gegevens gebruiken: KU Leuven, Oude Markt 13, B-3000 Leuven, Rek. nr.: BE09 4320 0000 1157 (hoofdrekeningnr. KU Leuven), BIC: KREDBEBB, BTW-nr.: BE 0419.052.173; Ondernemingsnr.: 0419.052.173.
-								</p>
+
 							</form>
 					</div>
 				</div>

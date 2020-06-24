@@ -6,7 +6,11 @@
     <!-- Content -->
     <p id="simple-pages-breadcrumbs">
       <span><a href="<?php echo url('/');?>">Home</a></span>
-       / <span><a href="<?php echo url('projecten');?>">Projecten</a></span>
+      <?php if(metadata($item,'item_type_name') == 'Project'):?>
+         / <span><a href="<?php echo url('projecten');?>">Projecten</a></span>
+      <?php elseif(metadata($item,'item_type_name') == 'News'):?>
+         / <span><a href="<?php echo url('nieuws');?>">Nieuws</a></span>
+      <?php endif;?>
        / <?php echo metadata('item', array('Dublin Core', 'Title')); ?>
     </p>
     <div class='top'>
@@ -15,6 +19,11 @@
     <div class="row">
         <div class="col-md-8 col-sm-12">
             <div class='content'>
+                <?php if($date = metadata('item', array("Dublin Core", "Date"))):?>
+                  <p class="date">
+                    <?php echo $date;?>
+                  </p>
+                <?php endif;?>
                 <?php echo metadata('item', array('Dublin Core', 'Description')); ?>
             </div>
             <div class="gallery">

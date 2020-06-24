@@ -8134,6 +8134,12 @@ header {
   border-bottom: 2px solid #68ba98;
 }
 
+.date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem !important;
+}
+
 .co {
   margin-bottom: 1.5rem;
 }
@@ -8191,8 +8197,6 @@ header {
 }
 
 .co .col-overlay {
-  bottom: 0;
-  left: 0.9rem;
   background: white;
 }
 
@@ -8225,11 +8229,6 @@ header {
 .co .more a {
   color: rgba(36, 36, 36, 0.6);
   font-weight: 300;
-}
-
-.co .date {
-  font-size: 0.9rem;
-  color: #B3B6BB;
 }
 
 .diensten-section {
@@ -8459,6 +8458,13 @@ header {
 .exhibit-show-section .record,
 .simple-page-section .record {
   margin-bottom: 2rem;
+}
+
+.exhibit-show-section .record .item-date,
+.simple-page-section .record .item-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
 }
 
 .exhibit-show-section .field,

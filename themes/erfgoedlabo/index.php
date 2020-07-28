@@ -103,7 +103,7 @@
           <div class="row">
 
           <?php foreach($news as $new):?>
-            <div class="co col-sm-12 col-md-<?php echo 12/sizeof($new);?>">
+            <div class="co col-sm-12 col-md-<?php echo 12/sizeof($news);?>">
                 <a class="block-link" href="<?php echo record_url($new);?>">
                   <?php
                     $files = $new->Files;

@@ -76,21 +76,19 @@
 										</div>
 
 									<div class="field" >
-											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 1: In welke klimaatcondities moet je jouw collectie bewaren?  Kies jouw collectieprofiel:</label></h3>
+											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Klimaatomstandigheden en mogelijke maatregelen met een focus op de noden van de collecties. Kies jouw collectieprofiel:</label></h3>
 											<div class='inputs' >
 												<input value="museale" type="radio" name="workshop"> Museale collectie<br />
-												<input value="archief" type="radio" name="workshop"> Archiefcollectie<br />
-												<input value="bibliotheek" type="radio" name="workshop"> Bibliotheekcollectie<br />
+												<input value="archief-bibliotheek" type="radio" name="workshop"> Archief- en bibliotheekcollectie<br />
 												</div>
 										</div>
 
 										<div class="field" >
-											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 2: Welke passieve ingrepen zijn mogelijk ten aanzien van luchtkwaliteit en binnenklimaat? Kies jouw collectieprofiel:</label></h3>
+											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 2: Klimaatomstandigheden en mogelijke maatregelen met de focus op het gebouw en de klimaatgeschiedenis? Kies jouw collectieprofiel:</label></h3>
 
 											<div class='inputs' >
 												<input value="museale" type="radio" name="workshop2"> Museale collectie<br />
-												<input value="archief" type="radio" name="workshop2"> Archiefcollectie<br />
-												<input value="bibliotheek" type="radio" name="workshop2"> Bibliotheekcollectie<br />
+												<input value="archief-bibliotheek" type="radio" name="workshop2"> Archief- en bibliotheekcollectie<br />
 												</div>
 										</div>
 
@@ -110,15 +108,15 @@
 
 								</fieldset>
 
-								<!--<h5>Betaling</h5>
-								<p>Gelieve 30 euro over te schrijven op rekening BE60 7340 0666 0370  met volgende vermelding in het veld vrije mededeling: 400/0019/60045 + naam deelnemer.
+								<h5>Betaling</h5>
+								<p>Gelieve 15 euro  over te schrijven op rekening BE82 736076717768
+ met vermelding van studiedag lucht + naam deelnemer + organisatie.
 								</p>
 								<p><em>Betaling via factuur?</em><br />
-								Mail dan naam bedrijf, adres, e-mail facturatie, BTW-nr./ondernemingsnr., bestelbonnr. of referentie bestelbon (indien dit moet vermeld worden op de factuur) naar <strong>ann.boeckmans@kuleuven.be</strong>.
-								</p>
+								Mail dan naam bedrijf, adres, e-mail facturatie, eventueel BTW-nr./ondernemingsnr., bestelbonnr. of referentie bestelbon (indien dit moet vermeld worden op de factuur) naar info@erfgoedlabo.be.</p>
 								<p><em>Bestelbon opmaken?</em><br />
-								Graag volgende gegevens gebruiken: KU Leuven, Oude Markt 13, B-3000 Leuven, Rek. nr.: BE09 4320 0000 1157 (hoofdrekeningnr. KU Leuven), BIC: KREDBEBB, BTW-nr.: BE 0419.052.173; Ondernemingsnr.: 0419.052.173.
-							</p>-->
+								Graag volgende gegevens gebruiken: Erfgoedlabo vzw, Grote Markt 9, 3000 Leuven.
+							</p
 
 								<fieldset>
 										<div class="field">

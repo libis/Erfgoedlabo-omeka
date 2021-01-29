@@ -76,7 +76,7 @@
 										</div>
 
 									<div class="field" >
-											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Klimaateisen op maat van jouw collectie:</label></h3>
+											<h3 style="margin-bottom:6px;float:none;width:100%;"><label>Werksessie 1: Klimaateisen op maat van jouw collectie:</label></h3>
 											<div class='inputs' >
 												<input value="museale" type="radio" name="workshop"> Museale collectie<br />
 												<input value="archief-bibliotheek" type="radio" name="workshop"> Archief- en bibliotheekcollectie<br />

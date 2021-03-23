@@ -49,14 +49,15 @@
             $i = 0;
             $rights = metadata('item', array('Dublin Core', 'Rights'),array('all' => true));
             foreach($files as $file):?>
-              <div id="itemfiles" class="element">
+              <div id="itemfiles" class="element" style="margin-bottom:1rem;">
                   <img src="<?php echo $file->getWebPath('thumbnail');?>" />
-              </div>
+
               <?php
                 if(isset($rights[$i])):
                   echo "<small><em>".$rights[$i]."</em></small>";
                 endif;
               ?>
+              </div>
               <?php $i++;?>
             <?php
             endforeach;

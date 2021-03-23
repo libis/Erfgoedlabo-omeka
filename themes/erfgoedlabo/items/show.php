@@ -44,13 +44,22 @@
         </div>
         <?php if (metadata('item', 'has files')):?>
         <div class="col-md-4 col-sm-12 side">
-          <div id="itemfiles" class="element">
-              <div class="element-text"><img src="<?php echo $cover->getWebPath('thumbnail');?>" /></div>
-          </div>
           <?php
-            if(metadata('item', array('Dublin Core', 'Rights'))):
-              echo "<small><em>".metadata('item', array('Dublin Core', 'Rights'))."</em></small>";
-            endif;
+            $files = get_current_record('item')->getFiles();
+            $i = 0;
+            $rights = metadata('item', array('Dublin Core', 'Rights'),array('all' => true));
+            foreach($files as $file):?>
+              <div id="itemfiles" class="element">
+                  <img src="<?php echo $file->getWebPath('thumbnail');?>" />
+              </div>
+              <?php
+                if(isset($rights[$i])):
+                  echo "<small><em>".$rights[$i]."</em></small>";
+                endif;
+              ?>
+              <?php $i++;?>
+            <?php
+            endforeach;
           ?>
         </div>
         <?php endif;?>

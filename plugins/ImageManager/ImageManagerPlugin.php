@@ -29,15 +29,15 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function hookInstall()
     {
-        
+
     }
 
     /**
      * Uninstall the plugin.
      */
     public function hookUninstall()
-    {        
-        
+    {
+
     }
 
 
@@ -52,7 +52,7 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
 
      /**
      * Add the routes for accessing simple pages by slug.
-     * 
+     *
      * @param Zend_Controller_Router_Rewrite $router
      */
     public function hookDefineRoutes($args)
@@ -60,30 +60,30 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
         // Add custom routes based on the page slug.
         $router = $args['router'];
 	$router->addRoute(
-	    'image-manager', 
+	    'image-manager',
 	    new Zend_Controller_Router_Route(
-	       "image-manager/", 
+	       "image-manager/",
 	        array('module' => 'image-manager')
 	    )
 	);
-        
+
         $router = $args['router'];
 	$router->addRoute(
-	    'image-manager/connector', 
+	    'image-manager/connector',
 	    new Zend_Controller_Router_Route(
-	       "image-manager/connector", 
+	       "image-manager/connector",
 	        array('module' => 'image-manager',
                       'controller' => 'index',
                       'action' => 'connector'
                     )
 	    )
 	);
-        
+
         $router = $args['router'];
 	$router->addRoute(
-	    'image-manager/window', 
+	    'image-manager/window',
 	    new Zend_Controller_Router_Route(
-	       "image-manager/window", 
+	       "image-manager/window",
 	        array('module' => 'image-manager',
                       'controller' => 'index',
                       'action' => 'window'
@@ -91,8 +91,8 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
 	    )
 	);
     }
-    
-    public function hookAdminHead(){        
+
+    public function hookAdminHead(){
         //css
         queue_css_url('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css');
         queue_css_file('theme');
@@ -100,12 +100,12 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
         //js
         //queue_js_url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.js");
         queue_js_file('elFinder/js/elFinder.min');
-        
+
         if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'/simple-pages/index/edit/') !== false) {
             queue_js_file('imageManager');
-        }       
+        }
     }
-    
+
     public function hookAdminFooter(){
         if (strpos('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'],'/simple-pages/index/edit/') !== false) {
             $page = get_current_record('SimplePagesPage');
@@ -114,7 +114,7 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
         else{
             $tiny_mce =0;
         }
-        
+
         ?>
         <script>
             jQuery(window).load(function(){
@@ -123,18 +123,15 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
                     mode : 'exact',
                     elements: '<?php if ($tiny_mce) echo 'simple-pages-text'; ?>',
                     // Add plugins:
-                    plugins: 'media,paste,inlinepopups',
+                    plugins: 'media,paste',
                     // Configure theme:
-                    theme: 'advanced',
+                    theme: 'modern',
                     height : "480",
-                    theme_advanced_toolbar_location: 'top',
-                    theme_advanced_toolbar_align: 'left',
-                    theme_advanced_buttons3_add : 'pastetext,pasteword,selectall',
                     // Allow object embed. Used by media plugin
                     // See http://www.tinymce.com/forum/viewtopic.php?id=24539
                     media_strict: false,
                     // General configuration:
-                    convert_urls: false, 
+                    convert_urls: false,
                     file_browser_callback: elFinderBrowser,
                     init_instance_callback : myCustomInitInstance
 
@@ -152,16 +149,16 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
                         jQuery('#simple-pages-text').css('visibility','visible');
                     }
                 });
-    
+
                 function elFinderBrowser (field_name, url, type, win) {
-                    var current_url = window.location.href; 
+                    var current_url = window.location.href;
                     var split_url = current_url.split("/admin/");
 
                     tinyMCE.activeEditor.windowManager.open({
 
                       file: split_url[0] + '/admin/image-manager/window',// use an absolute path!
                       title: 'File Browser',
-                      width: 900,  
+                      width: 900,
                       height: 420,
                       inline: 'yes',    // This parameter only has an effect if you use the inlinepopups plugin!
                       popup_css: false, // Disable TinyMCE's default popup CSS
@@ -177,7 +174,7 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
                     jQuery('.mceEditor:last').hide();
                     jQuery('.mceEditor:first').show();
                 }
-        
+
             });
         </script>
         <?php
@@ -199,10 +196,10 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
         set_option('simple_pages_filter_page_content', (int)(boolean)$_POST['simple_pages_filter_page_content']);
     }
 
-   
+
     /**
      * Add the Image Manager link to the admin main navigation.
-     * 
+     *
      * @param array Navigation array.
      * @return array Filtered navigation array.
      */
@@ -210,8 +207,8 @@ class ImageManagerPlugin extends Omeka_Plugin_AbstractPlugin
     {
         $nav[] = array(
             'label' => __('Image Manager'),
-            'uri' => url('image-manager')            
+            'uri' => url('image-manager')
         );
         return $nav;
-    }    
+    }
 }

@@ -39,11 +39,19 @@
             jQuery('#search > form > input[type="search"]').focus();
         });
 
-        jQuery('#search, #search button.close').on('click keyup', function(event) {
-            if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-                $(this).removeClass('open');
+        
+        jQuery('#search').on('click', function(event) {
+            if (event.target === this || jQuery(event.target).closest('button').hasClass('close')) {
+                jQuery('#search').removeClass('open');
             }
         });
+
+        jQuery('#search').on('keyup', function(event) {
+            if (event.key === 'Escape') {
+                jQuery('#search').removeClass('open');
+            }
+        });
+
     });
     </script>
 </body>

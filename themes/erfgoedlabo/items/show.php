@@ -34,4 +34,27 @@
   </div>
 </div>
 
+<script> 
+jQuery(document).ready(function () {
+    jQuery('.content').each(function () {
+        const $iframe = jQuery(this).find('iframe');
+
+        if ($iframe.length) {
+            const src = $iframe.attr('src') || '';
+
+            // Controleer op bekende videodiensten
+            const isVideo = /youtube\.com|vimeo\.com|dailymotion\.com|wistia\.com|player\.twitch\.tv/.test(src);
+
+            if (isVideo) {
+                $iframe.removeAttr('style').css({
+                    width: '100%',
+                    height: '100%',
+                    display: 'block'
+                });
+            }
+        }
+    });
+});
+</script>
+
 <?php echo foot(); ?>
